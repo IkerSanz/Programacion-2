@@ -1,1 +1,56 @@
+using System;
 
+namespace Clase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Convertir de Char a Int
+            Console.WriteLine("Tipo de cnversion implicito");
+            char charCharacter = 'a';
+            int aCharacterInt = charCharacter;
+            Console.WriteLine($"Estamos convirtiendo el caracter ' {charCharacter}' a un valor entero: {aCharacterInt}");
+
+            //Convertir de Char a Int
+            Console.WriteLine("Tipo de cnversion implicito");
+            char charCharacter1 = '@';
+            int CharacterIntU = charCharacter1;
+            Console.WriteLine($"Estamos convirtiendo el caracter ' {charCharacter1}' a un valor entero: {CharacterIntU}");
+
+            //int a double y de int a float
+
+            int numberInt = 99;
+            double numberDouble = numberInt;
+            float numberFloat = numberInt;
+            Console.WriteLine($"Numero entero {numberInt} => float {numberFloat} => double {numberDouble}");
+
+            //Vamos a intentar a convertir int en Char
+
+            int aCharacterInte = 97;
+            char a = (char)aCharacterInte;
+
+            Console.WriteLine("Tipo de conversion explicita");
+
+            double ValorInicial = 97.838383d;
+            Console.WriteLine($"Estamos convirtiendo el valor (double)'{ValorInicial}' a un valor float: {(float)ValorInicial}");
+            Console.WriteLine($"Estamos convirtiendo el valor (double)'{ValorInicial}' a un valor float: {(long)ValorInicial}");
+            Console.WriteLine($"Estamos convirtiendo el valor (double)'{ValorInicial}' a un valor float: {(char)ValorInicial}");
+
+            //Aqui añadimos la refencias de la doc
+
+            int myInt = 10;
+            double myDouble = 56.234d;
+            bool myBool = true;
+            char myChar = 'a';
+
+            Console.WriteLine(Convert.ToString(myInt)); //10
+            Console.WriteLine(Convert.ToDouble(myInt)); //10
+            Console.WriteLine(Convert.ToInt32(myChar)); //97
+            Console.WriteLine(Convert.ToString(myBool)); //TRUE
+            Console.WriteLine(Convert.ToInt64(myDouble)); //56
+            Console.WriteLine(Convert.ToBoolean(0)); //False
+
+        }
+    }
+}
